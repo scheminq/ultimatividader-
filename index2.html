@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function calcularMedia() 
+        {
+            var notas = [];
+            for (var i = 0; i < 4; i++) {
+                var nota = parseFloat(prompt("Digite a " + (i + 1) + "ª nota:"));
+                notas.push(nota);
+            }
+            var somaNotas = 0;
+            for (var i = 0; i < notas.length; i++) {
+                somaNotas += notas[i];
+            }
+            var mediaNotas = somaNotas / notas.length;
+    
+            alert("Sua média é " + mediaNotas);
+
+            const calcularnov = confirm("Deseja fazer novamente?");
+            if (calcularnov)
+            {
+                calcularMedia();
+            }
+            else
+            {
+                alert("Sistema encerrado");
+            }
+        }
+        
+        calcularMedia();
+    
+    </script>
+</body>
+</html>
